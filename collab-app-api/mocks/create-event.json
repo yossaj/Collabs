@@ -1,5 +1,5 @@
 {
-    "body": "{\"type\":\"charity\",\"description\":\"hello world\",\"skills\":\"css\",\"attachment\":\"hello.jpg\"}",
+    "body": "{\"project_type\":\"charity\",\"description\":\"hello world\",\"skills\":\"css\",\"attachment\":\"hello.jpg\"}",
     "requestContext": {
         "identity": {
             "cognitoIdentityId": "USER-SUB-1234"
