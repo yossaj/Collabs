@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { PageHeader, ListGroup, ListGroupItem, PanelTitle} from "react-bootstrap";
+import { PageHeader, ListGroup, ListGroupItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { API } from "aws-amplify";
-import "./Home.css";
+import "./MyProjects.css";
 
 export default class Home extends Component {
     constructor(props) {
@@ -65,21 +65,6 @@ export default class Home extends Component {
             <div className="lander">
                 <h1>Collaborate</h1>
                 <p>Find people to collaborate with.</p>
-                
-                <div className="row text-center">
-
-                    <div className="col-lg-3 col-md-6 mb-4">
-                        <div className="card h-100">
-                            <img className="card-img-top" src="http://placehold.it/500x325" alt=""/>
-                                <div className="card-body">
-                                    <h4 className="card-title">Charity Project</h4>
-                                </div>
-                                <div className="card-footer">
-                                    <a href="#" className="btn btn-primary">Help Out!</a>
-                                </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         );
     }
@@ -98,7 +83,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="Home">
-                {this.renderLander()}
+                {this.props.isAuthenticated ? this.renderProjects() : this.renderLander()}
             </div>
         );
     }
