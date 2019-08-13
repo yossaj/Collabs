@@ -3,6 +3,7 @@ import { PageHeader, ListGroup, ListGroupItem, PanelTitle} from "react-bootstrap
 import { LinkContainer } from "react-router-bootstrap";
 import { API } from "aws-amplify";
 import "./Home.css";
+import SearchBar from "../components/SearchBar";
 
 export default class Home extends Component {
     constructor(props) {
@@ -101,7 +102,7 @@ export default class Home extends Component {
     renderProjects() {
         return (
             <div className="Home">
-                <PageHeader>Your Projects</PageHeader>
+                <SearchBar/>
                 <div className="row text-center">
                     {!this.state.isLoading && this.renderProjectsList(this.state.projects)}
                 </div>
